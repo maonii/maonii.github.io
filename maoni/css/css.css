@@ -1,0 +1,57 @@
+*{
+	box-sizing: border-box;
+}
+.ni::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body{
+	background: url(../img/daota.jpg) fixed;
+	color: #fff;	
+    background-size:100% ;
+	min-height: 1200px;
+}
+.logo h1{
+	display: none;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+header{
+	max-width: 1200px;
+	margin:30px auto;
+	position: relative;
+}
+.logo img{
+	height: 100px;
+	width: auto;
+}
+
+header nav{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+header nav ul li{
+	float: left;
+	margin: 20px 30px;
+}
+header nav ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 10px;
+	border:1px solid transparent;
+	transition: color .5s,border .5S;	
+}
+header nav ul li a:hover{
+	color: #000;
+	border: 1px solid #FFFFFF;
+}
