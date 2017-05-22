@@ -1,6 +1,12 @@
 *{
 	box-sizing: border-box;
 }
+.maoni{	
+	max-width: 1200px;
+	margin:30px auto;
+	position: relative;
+	
+}
 .ni::after{
 	content: "";
 	display: table;
@@ -25,11 +31,7 @@ a{
 	color: #FFFFFF;
 }
 
-header{
-	max-width: 1200px;
-	margin:30px auto;
-	position: relative;
-}
+
 .logo img{
 	height: 100px;
 	width: auto;
@@ -55,3 +57,22 @@ header nav ul li a:hover{
 	color: #000;
 	border: 1px solid #FFFFFF;
 }
+
+.mao li a{
+	float: left;
+	width: 160px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin: 10px 30px 10px 0px;
+	background-color: rgba(100,200,300,.5);
+	border-radius: 5px;
+	transition: background .5s,border-radius .5s;
+	cursor: pointer;
+}
+.mao li a:hover{
+	background-color: rgba(100,200,300,.8);
+	border-radius: 0px;
+}
+
+
