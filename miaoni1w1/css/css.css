@@ -1,0 +1,94 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0;
+}
+figure{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+    color:#FFFFFF ;
+}
+header{
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0,0,0,.5);	
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	transition: all .5s;
+}
+.container{
+	max-width: 1200px;
+	margin: auto; 
+	padding: 5px;
+	position: relative;
+}
+header .logo{
+	display: inline-block;
+	float: left;
+	margin: -20px 0;
+}
+header .logo span{
+	font-size: 3em;
+	font: family:'pacifico', cursive;
+	vertical-align: middle;
+	
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+	display: inline-block;
+}
+header .topmenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topmenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topmenu ul li{
+	float: left;
+	margin: 0px 20px;
+}
+header .topmenu ul li a{
+	text-shadow: 1px 1px 3px  rgba(0,0,0,.5);
+}
+header .topmenu li.active a,
+header .topmenu li a:hover{
+	color: #339BEB;
+}
+
+.shouye{
+	background: url(../img/banner.jpg) no-repeat center top;
+	height: 1200px;
+}
+.container{
+	top: 30%;
+	text-align: center;
+	color: #fff;
+}
+.container h1{
+	font-size: 3em;
+}
+.container h1 span{
+	color: #339BEB;
+	text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+.container p{
+	text-align: left;
+	line-height: 2em;
+	font-size: 1.2em;
+}
+.container p em{
+	color: #000;
+	background: rgba(255,255,255,.5);
+}
