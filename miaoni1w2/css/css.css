@@ -1,0 +1,104 @@
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.container{
+	max-width: 1200px;
+	margin: auto; 
+	padding: 5px;
+	position: relative;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0;
+}
+figure{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+    color:#FFFFFF ;
+}
+.fixed{
+	width: 100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,0);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	transition: all .5s;
+}
+.fixed.on{
+	padding: 20px 0;
+	background-color: rgba(0,0,0,.7);
+}
+
+header .logo{
+	display: inline-block;
+	float: left;
+	margin: -20px 0;
+}
+header .logo span{
+	font-size: 3em;
+	font: family:'pacifico', cursive;
+	vertical-align: middle;
+	
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+	display: inline-block;
+}
+header .topmenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topmenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topmenu ul li{
+	float: left;
+	margin: 0px 20px;
+}
+header .topmenu ul li a{
+	color: #FFFFFF;
+	text-shadow: 1px 1px 3px  rgba(0,0,0,.2);
+	transition: color .5s;
+}
+header .topmenu li.active a,
+header .topmenu li a:hover{
+	color: #339BEB;
+}
+
+.shouye{
+	background: url(../img/banner.jpg) no-repeat center top;
+	height: 1200px;
+}
+.container{
+	top: 30%;
+	text-align: center;
+	color: #fff;
+}
+.shouye h1{
+	font-size: 3em;
+}
+.shouye h1 span{
+	color: #339BEB;
+	text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+.shouye p{
+	text-align: left;
+	line-height: 2em;
+	font-size: 1.2em;
+}
+.shouye p em{
+	color: #000;
+	background: rgba(255,255,255,.5);
+}
