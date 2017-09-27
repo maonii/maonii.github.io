@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<div class="game">
+			<title>猜数字游戏</title>
+		</div>
+		
+		<link rel="stylesheet" type="text/css" href=""/>
+	</head>
+	<body>
+		<div class="input">
+			<input type="number" name="Num" id="Num" value="0-10整数，6次机会" />
+			<input type="button" name="guess" id="guess" value="提交" />
+			<input type="button" name="again" id="again" value="重来" />
+		</div>
+		<div class="jisuan">
+			<div class="Time">
+				剩余次数：<span>6</span>
+			</div>
+			<div class="lishi">
+				猜测历史：<span></span><br />
+			</div>
+		</div>
+		
+		
+		
+		<script type="text/javascript">
+			var rangeNum=10;
+			var guessTimes=6;
+			var goalNum=Math.floor(Math.random()*(rangeNum+1));
+			var numTemp=0;
+			var ibtNum=document.querySelector(".input #Num");
+			var ibtGuess=document.querySelector(".input #guess");
+			var ibtAgain=document.querySelector(".input #again");
+			var spanTime=document.querySelector(".jisuan .Time span");
+			var hispitalSpan=document.querySelector(".jisuan .lishi span");
+			
+			console.log(goalNum);
+			ibtGuess.addEventListener("click",checkguess);
+			ibtAgain.addEventListener("click",repeatgame);
+			spanTime.innerHTML = guessTimes;
+			ibtNum.setAttribute('placeholder',"0-"+rangeNum+"整数,"+guessTimes+"次机会");
+			
+			function checkguess(){
+				numTemp = parseInt(ibtNum.value);
+			
+			if (isNaN(numTemp)) {
+					hispitalSpan.innerHTML+="你怕不是个傻子吧？<br>";
+				}
+			
+			  if (guessTimes-->0) {
+			  	if (numTemp>goalNum) {
+			  		hispitalSpan.innerHTML+="这次猜的"+numTemp+",有点偏大<br>"
+			  	}else if (numTemp<goalNum) {
+			  		hispitalSpan.innerHTML+="这次猜的"+numTemp+",有点偏小<br>"
+			  	}else if (numTemp==goalNum) {
+			  		hispitalSpan.innerHTML+="正确答案为"+goalNum+"恭喜答对了。<br>"
+			  		closeGame();
+			  	}else{
+			  		hispitalSpan.innerHTML+="出现错误 <br>"
+			  	}
+			  }
+			  
+			  if (guessTimes<=0) {
+			  	hispitalSpan.innerHTML+="次数归零，GAME OVER~<br>"
+			  	closeGame();
+			  }
+			  
+			  spanTime.innerHTML=guessTimes;
+			  ibtNum.value="";
+			  ibtNum.focus();
+			}
+			
+			function closeGame(){
+				ibtNum.disabled=true;
+				ibtGuess.style.display="none";
+				ibtAgain.style.display="block";
+			}
+			
+			function repeatgame(){
+				goalNum=Math.floor(Math.random()*(rangeNum+1))
+				console.log(goalNum)
+				guessTimes=6;
+				spanTime.innerHTML=guessTimes;
+				ibtNum.disabled=false;
+				ibtGuess.style.display="block";
+				ibtAgain.style.display="none";
+				hispitalSpan.innerHTML+="重新开始游戏<br>"
+				ibtNum.focus();
+			}
+		</script>
+	</body>
+</html>
